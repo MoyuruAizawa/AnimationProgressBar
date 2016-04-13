@@ -1,17 +1,18 @@
 package com.lvla.android.animation_progress_bar;
 
+import android.animation.ObjectAnimator;
+import android.animation.TimeInterpolator;
 import android.content.Context;
-import android.os.Build;
 import android.util.AttributeSet;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
-
-import com.nineoldandroids.animation.ObjectAnimator;
 
 /**
  * Created by lvla on 2016/04/13.
  */
 public class AnimationProgressBar extends ProgressBar {
+    private ObjectAnimator animator = null;
+    private TimeInterpolator interpolator = null;
+
     public AnimationProgressBar(Context context) {
         super(context);
     }
@@ -24,18 +25,22 @@ public class AnimationProgressBar extends ProgressBar {
         super(context, attrs, defStyleAttr);
     }
 
+    public void setInterpolator(TimeInterpolator interpolator) {
+        this.interpolator = interpolator;
+    }
+
     public void setProgress(int progress, int animationDurationMilliSec) {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            android.animation.ObjectAnimator animator
-                    = android.animation.ObjectAnimator.ofInt(this, "progress", progress);
-            animator.setDuration(animationDurationMilliSec);
-            animator.setInterpolator(new DecelerateInterpolator());
-            animator.start();
-        } else {
-            ObjectAnimator animator = ObjectAnimator.ofInt(this, "progress", progress);
-            animator.setDuration(animationDurationMilliSec);
-            animator.setInterpolator(new DecelerateInterpolator());
-            animator.start();
+        animator = ObjectAnimator.ofInt(this, "progress", progress);
+        animator.setDuration(animationDurationMilliSec);
+        if(interpolator != null) {
+            animator.setInterpolator(interpolator);
+        }
+        animator.start();
+    }
+
+    public void end() {
+        if(animator != null) {
+            animator.end();
         }
     }
 }
