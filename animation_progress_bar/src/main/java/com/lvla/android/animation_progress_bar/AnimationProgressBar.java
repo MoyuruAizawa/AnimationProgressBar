@@ -25,7 +25,7 @@ public class AnimationProgressBar extends ProgressBar {
         super(context, attrs, defStyleAttr);
     }
 
-    public void setInterpolator(TimeInterpolator interpolator) {
+    public void setInterpolatorForHorizontal(TimeInterpolator interpolator) {
         this.interpolator = interpolator;
     }
 
