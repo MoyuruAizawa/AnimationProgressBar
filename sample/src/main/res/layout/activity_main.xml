@@ -12,15 +12,44 @@
     tools:context="com.lvla.android.sample.MainActivity"
     android:gravity="center">
 
-    <com.lvla.android.animation_progress_bar.AnimationProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progressBar1" />
+        android:text="AnimationProgressBar"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView" />
 
     <com.lvla.android.animation_progress_bar.AnimationProgressBar
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/progressBar2"/>
+        android:id="@+id/animationProgressBar"/>
+
+    <com.lvla.android.animation_progress_bar.AnimationProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/animationProgressBar2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProgressBar"
+        android:id="@+id/textView2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="20dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:id="@+id/button"
+        android:layout_marginTop="40dp" />
+
 </LinearLayout>
