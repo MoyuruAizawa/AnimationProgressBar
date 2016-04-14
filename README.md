@@ -1,5 +1,18 @@
 # AnimationProgressBar
-Progress with Animation
+![](https://github.com/lVlA/AnimationProgressBar/blob/master/image/sample.gif)
+
+# Usage
+```grooby
+compile 'com.lvla.android:animation-progress-bar:1.0.0'
+```
+
+```java
+// if you want
+// animationProgressBar.setInterpolatorForHorizontal(new DecelerateInterpolator())
+
+int durationMs = 1000;
+animationProgressBar.setProgress(100, durationMs);
+```
 
 # LICENSE
 Copyright 2016 Moyuru Aizawa
