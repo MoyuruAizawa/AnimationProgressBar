@@ -54,3 +54,4 @@ AnimationProgressBar.iml
 .idea/libraries/support_media_compat_24_2_1.xml
 .idea/libraries/support_v4_24_2_1.xml
 .idea/libraries/support_vector_drawable_24_2_1.xml
+*.iml
