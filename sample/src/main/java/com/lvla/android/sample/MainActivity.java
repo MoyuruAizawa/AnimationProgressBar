@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
         animationProgress2.setMax(MAX);
         progress.setMax(MAX);
 
-        animationProgress2.setInterpolatorForHorizontal(new DecelerateInterpolator());
-
         Button button = (Button)findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
                         .subscribe(new Action1<Integer>() {
                             @Override
                             public void call(Integer i) {
-                                animationProgress.setProgress( (MAX/4) * i, 1000 );
-                                animationProgress2.setProgress((MAX/4) * i, 1000 );
+                                animationProgress.setProgress((MAX/4) * i, 1000);
+                                animationProgress2.setProgress((MAX/4) * i, 1000, new DecelerateInterpolator());
                                 progress.setProgress( (MAX/4) * i );
                             }
                         });

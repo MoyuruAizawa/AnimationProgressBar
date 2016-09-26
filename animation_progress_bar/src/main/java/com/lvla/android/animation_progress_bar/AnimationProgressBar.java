@@ -3,15 +3,12 @@ package com.lvla.android.animation_progress_bar;
 import android.animation.ObjectAnimator;
 import android.animation.TimeInterpolator;
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
 
-/**
- * Created by lvla on 2016/04/13.
- */
 public class AnimationProgressBar extends ProgressBar {
     private ObjectAnimator animator = null;
-    private TimeInterpolator interpolator = null;
 
     public AnimationProgressBar(Context context) {
         super(context);
@@ -25,17 +22,17 @@ public class AnimationProgressBar extends ProgressBar {
         super(context, attrs, defStyleAttr);
     }
 
-    public void setInterpolatorForHorizontal(TimeInterpolator interpolator) {
-        this.interpolator = interpolator;
-    }
-
-    public void setProgress(int progress, int animationDurationMilliSec) {
+    public void setProgress(int progress, int animationDurationMilliSec, @Nullable TimeInterpolator interpolator) {
         animator = ObjectAnimator.ofInt(this, "progress", progress);
         animator.setDuration(animationDurationMilliSec);
-        if(interpolator != null) {
+        if (interpolator != null) {
             animator.setInterpolator(interpolator);
         }
         animator.start();
+    }
+
+    public void setProgress(int progress, int animationDurationMilliSec) {
+        setProgress(progress, animationDurationMilliSec, null);
     }
 
     public void end() {
