@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                animationProgress.end();
-                animationProgress2.end();
+                animationProgress.stopAnimation();
+                animationProgress2.stopAnimation();
 
                 animationProgress.setProgress(0);
                 animationProgress2.setProgress(0);

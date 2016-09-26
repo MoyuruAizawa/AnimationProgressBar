@@ -35,7 +35,7 @@ public class AnimationProgressBar extends ProgressBar {
         setProgress(progress, animationDurationMilliSec, null);
     }
 
-    public void end() {
+    public void stopAnimation() {
         if(animator != null) {
             animator.end();
         }
