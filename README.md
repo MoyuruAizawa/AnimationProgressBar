@@ -3,15 +3,15 @@
 
 # Usage
 ```grooby
-compile 'com.lvla.android:animation-progress-bar:1.0.0'
+compile 'com.lvla.android:animation-progress-bar:2.0.0'
 ```
 
 ```java
-// if you want
-// animationProgressBar.setInterpolatorForHorizontal(new DecelerateInterpolator())
-
 int durationMs = 1000;
 animationProgressBar.setProgress(100, durationMs);
+
+// or
+// animationProgressBar.setProgress(100, dutarionMs, new DecelerateInterpolator())
 ```
 
 # LICENSE
