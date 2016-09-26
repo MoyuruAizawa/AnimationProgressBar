@@ -30,3 +30,27 @@ proguard/
 
 # Android Studio captures folder
 captures/
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/runConfigurations.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/copyright/profiles_settings.xml
+AnimationProgressBar.iml
+.idea/libraries/animated_vector_drawable_24_2_1.xml
+.idea/libraries/appcompat_v7_24_2_1.xml
+.idea/libraries/hamcrest_core_1_3.xml
+.idea/libraries/junit_4_12.xml
+.idea/libraries/library_2_4_0.xml
+.idea/libraries/rxandroid_1_1_0.xml
+.idea/libraries/rxjava_1_1_3.xml
+.idea/libraries/support_annotations_24_2_1.xml
+.idea/libraries/support_compat_24_2_1.xml
+.idea/libraries/support_core_ui_24_2_1.xml
+.idea/libraries/support_core_utils_24_2_1.xml
+.idea/libraries/support_fragment_24_2_1.xml
+.idea/libraries/support_media_compat_24_2_1.xml
+.idea/libraries/support_v4_24_2_1.xml
+.idea/libraries/support_vector_drawable_24_2_1.xml
